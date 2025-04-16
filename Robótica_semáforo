@@ -1,0 +1,64 @@
+#define LEDvermelho 5
+#define LEDamarelo -9
+#define LEDverde -10
+#define butao 7
+
+
+void setup()
+{
+  pinMode (LEDvermelho, OUTPUT);
+  pinMode (LEDamarelo, OUTPUT);
+  pinMode (LEDverde, OUTPUT);
+  pinMode (LEDvermelho2, OUTPUT);
+  pinMode (LEDverde2, OUTPUT);
+  pinMode (butao, INPUT);
+ 
+  digitalWrite(LEDverde, HIGH);
+  digitalWrite(LEDvermelho2, HIGH);
+  digitalWrite(LEDverde2, LOW);
+  digitalWrite(LEDamarelo, LOW);
+  digitalWrite(LEDvermelho, LOW);
+
+}
+
+void loop() {
+ 
+  if (digitalRead(butao)==1){
+  delay(2000);
+ 
+  digitalWrite(LEDverde ,LOW);
+  digitalWrite(LEDamarelo ,HIGH);
+  digitalWrite(LEDvermelho2 ,HIGH);
+  delay(3000);
+  digitalWrite(LEDamarelo ,LOW);
+  digitalWrite(LEDvermelho ,HIGH);
+  delay(3000);
+ 
+  digitalWrite(LEDverde2 ,HIGH);
+  digitalWrite(LEDvermelho2 ,LOW);
+  delay(10000);
+   
+  digitalWrite(LEDverde2 ,LOW);
+  delay(1000);
+   
+  digitalWrite(LEDverde2 ,HIGH);
+  delay(1000);
+   
+  digitalWrite(LEDverde2 ,LOW);
+  delay(1000);
+   
+  digitalWrite(LEDverde2 ,HIGH);
+  delay(1000);
+   
+  digitalWrite(LEDverde2 ,LOW);
+  delay(1000);
+   
+  digitalWrite(LEDvermelho2 ,HIGH);
+  delay(3000);
+   
+  digitalWrite(LEDverde, HIGH);
+  digitalWrite(LEDvermelho, LOW);
+  
+  }
+
+}
