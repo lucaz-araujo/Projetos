@@ -1,0 +1,69 @@
+int but = 7;
+int verdet = 1;
+int amarelot = 2;
+int vert = 3;
+int verp = 4;
+int verdep = 5;
+
+int est_but = 0;
+
+void setup()
+{
+  pinMode(verdet, OUTPUT);
+  pinMode(amarelot, OUTPUT);
+  pinMode(vert, OUTPUT);
+  pinMode(verp, OUTPUT);
+  pinMode(verdep, OUTPUT);
+  pinMode(but, INPUT);
+  
+  digitalWrite(verdep, LOW);
+  digitalWrite(verp, HIGH);
+  digitalWrite(verdet, HIGH);
+  digitalWrite(amarelot, LOW); 
+  digitalWrite(vert, LOW);
+}
+
+void loop()
+{
+ 
+  
+ if (digitalRead(7) == 1) {
+   delay(5000);
+    
+    digitalWrite(verp, HIGH);
+    digitalWrite(verdet, LOW);
+    digitalWrite(amarelot, HIGH);
+    delay(3000);
+   
+    digitalWrite(amarelot, LOW);
+    digitalWrite(vert, HIGH);
+    delay(3000);
+   
+    digitalWrite(verdep, HIGH);
+    digitalWrite(verp, LOW);
+    delay(10000);
+   
+    digitalWrite(verdep, LOW);
+    delay(500);
+    digitalWrite(verdep, HIGH);
+    delay(500);
+    digitalWrite(verdep, LOW);
+    delay(500);
+    digitalWrite(verdep, HIGH);
+    delay(500);
+    digitalWrite(verdep, LOW);
+    delay(500);
+    digitalWrite(verdep, LOW);
+    delay(500);
+    digitalWrite(verp, HIGH);
+    delay(500);
+    digitalWrite(verdet, HIGH);
+    digitalWrite(vert, LOW);
+    
+   
+  }
+  
+  
+
+}
+
