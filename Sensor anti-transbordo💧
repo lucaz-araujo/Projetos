@@ -1,0 +1,74 @@
+int sensorBaixo = 2;
+int sensorMeio = 3;
+int sensorTopo = 4;
+int sensorTransbordo = 5;
+
+int ledVermelho = 8;
+int ledAmarelo = 9;
+int ledVerde = 10;
+int buzzer = 11;
+int ledAzul = 12;
+
+void setup() {
+  pinMode(sensorBaixo, INPUT_PULLUP);
+  pinMode(sensorMeio, INPUT_PULLUP);
+  pinMode(sensorTopo, INPUT_PULLUP);
+  pinMode(sensorTransbordo, INPUT_PULLUP);
+
+  pinMode(ledVermelho, OUTPUT);
+  pinMode(ledAmarelo, OUTPUT);
+  pinMode(ledVerde, OUTPUT);
+  pinMode(ledAzul, OUTPUT);
+  pinMode(buzzer, OUTPUT);
+
+  Serial.begin(9600);
+}
+
+void loop() {
+  bool nivelBaixo = digitalRead(sensorBaixo) == LOW;
+  bool nivelMedio = digitalRead(sensorMeio) == LOW;
+  bool nivelTopo = digitalRead(sensorTopo) == LOW;
+  bool transbordo = digitalRead(sensorTransbordo) == LOW;
+
+  // Nível BAIXO
+  if (nivelBaixo && !nivelMedio && !nivelTopo && !transbordo) {
+    digitalWrite(ledVermelho, HIGH);
+    digitalWrite(ledAmarelo, LOW);
+    digitalWrite(ledVerde, LOW);
+    digitalWrite(ledAzul, LOW);
+    digitalWrite(buzzer, LOW);
+    Serial.println("Nível: BAIXO");
+  }
+
+  // Nível MÉDIO
+  else if (nivelBaixo && nivelMedio && !nivelTopo && !transbordo) {
+    digitalWrite(ledVermelho, HIGH);
+    digitalWrite(ledAmarelo, HIGH);
+    digitalWrite(ledVerde, LOW);
+    digitalWrite(ledAzul, LOW);
+    digitalWrite(buzzer, LOW);
+    Serial.println("Nível: MÉDIO");
+  }
+
+  // Nível CHEIO
+  else if (nivelBaixo && nivelMedio && nivelTopo && !transbordo) {
+    digitalWrite(ledVermelho, HIGH);
+    digitalWrite(ledAmarelo, HIGH);
+    digitalWrite(ledVerde, HIGH);
+    digitalWrite(ledAzul, LOW);
+    digitalWrite(buzzer, LOW);
+    Serial.println("Nível: CHEIO");
+  }
+
+  // 🚨 TRANSBORDO
+  else if (transbordo) {
+    digitalWrite(ledVermelho, HIGH);
+    digitalWrite(ledAmarelo, HIGH);
+    digitalWrite(ledVerde, HIGH);
+    digitalWrite(ledAzul, HIGH);
+    digitalWrite(buzzer, HIGH);  // Liga o alarme sonoro
+    Serial.println("⚠️ ALERTA: CAIXA TRANSBORDANDO!");
+  }
+
+  delay(500);
+}
