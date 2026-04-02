@@ -12,13 +12,13 @@ Para o desenvolvimento de soluções e projetos, utilizo:
 
 * -Linguagens:** Python, PHP, C++, HTML5, CSS3.
 * -Banco de Dados:** MySQL.
-* -Interesses atuais:** Cloud Computing (AWS), Análise de dados (Google), Análise de Dados e Automação.
+* -Interesses atuais:** Cloud Computing (AWS), Análise de dados (Google) e Automação.
 
 # 📫 Vamos nos conectar?
 
 Gosto de trocar ideias sobre tecnologia, programação e esportes. Se quiser bater um papo ou colaborar em algum projeto, é só chamar!
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](pedroaraujo32165)
-[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:pedrolat14@gmail.com)
+[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](pedrolat14@gmail.com)
 
 > "O aprendizado é contínuo e a curiosidade é o que nos move."
