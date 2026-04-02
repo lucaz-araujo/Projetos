@@ -14,13 +14,6 @@ Para o desenvolvimento de soluções e projetos, utilizo:
 * -Banco de Dados:** MySQL.
 * -Interesses atuais:** Cloud Computing (AWS), Análise de dados (Google), Análise de Dados e Automação.
 
-# 📊 Estatísticas do GitHub
-
-<p align="left">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=Lucaz-Araujo&show_icons=true&theme=dracula&include_all_commits=true&count_private=true"/>
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Lucaz-Araujo&layout=compact&langs_count=7&theme=dracula"/>
-</p>
-
 # 📫 Vamos nos conectar?
 
 Gosto de trocar ideias sobre tecnologia, programação e esportes. Se quiser bater um papo ou colaborar em algum projeto, é só chamar!
